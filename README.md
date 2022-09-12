@@ -1,6 +1,6 @@
 # MechaCar_Statistical_Analysis
 ## Overview
-To help a client, Autos-R-Us, identify and troubleshoot issues in their production, two datasets ('mechaCar_mpg.csv' and 'Suspension_Coil.csv') were utilized to perform the following statistical analysis, using the R programming language.
+To help a client, Autos-R-Us, identify and troubleshoot issues in their production, two datasets ('mechaCar_mpg.csv' and 'Suspension_Coil.csv') were utilized to perform the following statistical analyses, using the R programming language.
 
 ## Linear Regression to Predict MPG
 To establish relationship between mpg and various MechaCars, we used the 'MechaCar_mpg.csv' dataset containing mpg test results for 50 prototype MechaCars. 
@@ -21,19 +21,19 @@ The summary output of this model is shown below.
 
 From the Pr(>|t|) values, which tell us the probability that each coefficient contributes a random amount of variance to the linear model, we can determine the following:
 
-**Vehicle_length:    2.60e-12**  
+**Vehicle_length:    2.60e-12**    
 Vehicle length is statistically unlikely to provide a random amount of variance to the linear model, meaning that vehicle length is likely to have a significant impact on mpg.
 
-**Vehicle_weight:    0.0776**
+**Vehicle_weight:    0.0776**    
 Vehicle weight is statistically likely to provide a random amount of variance to the linear model, meaning that vehicle weight is not likely to have a significant impact on mpg.
 
-**Spoiler_angle:     0.3069**
+**Spoiler_angle:     0.3069**    
 Spoiler angle is statistically likely to provide a random amount of variance to the linear model, meaning that spoiler angle is not likely to have a significant impact on mpg.
 
-**ground_clearance:  5.21e-08**
+**ground_clearance:  5.21e-08**    
 Ground clearance is statistically unlikely to provide a random amount of variance to the linear model, meaning that ground clearance is likely to have a significant impact on mpg.
 
-**AWD:               0.1852**
+**AWD:               0.1852**    
 AWD is statistically likely to provide a random amount of variance to the linear model, meaning that AWD is not likely to have a significant impact on mpg.
 
 To summarize, the variables that provide a non-random amount of variance to the mpg values in the dataset are and are likely to have an impact on mpg are: **vehicle length** and **ground clearance**.
@@ -73,17 +73,6 @@ The log10 coefficient was not used in this instance because the data was not ske
 
 [png]
 
-One Sample t-test
-
-data:  suscoil_table$PSI
-t = -1.8931, df = 149, p-value = 0.06028
-alternative hypothesis: true mean is not equal to 1500
-95 percent confidence interval:
- 1497.507 1500.053
-sample estimates:
-mean of x 
-  1498.78 
-
 Because the p-value above is greater than the significance level of 0.05, we do not have sufficient evidence to reject the null hypothesis, meaning that our suspension coil dataset is statistically similar to the true mean.
 
 **RESULTS OF 1-SAMPLE T-TEST (Lot 1)**
@@ -91,17 +80,6 @@ Because the p-value above is greater than the significance level of 0.05, we do 
 > t.test(lot1_table$PSI, mu = 1500)
 
 [png]
-
-One Sample t-test
-
-data:  lot1_table$PSI
-t = 0, df = 49, p-value = 1
-alternative hypothesis: true mean is not equal to 1500
-95 percent confidence interval:
- 1499.719 1500.281
-sample estimates:
-mean of x 
-     1500 
 
 Because the p-value above is greater than the significance level of 0.05, we do not have sufficient evidence to reject the null hypothesis, meaning that our suspension coil dataset is statistically similar to the true mean.
 
@@ -111,17 +89,6 @@ Because the p-value above is greater than the significance level of 0.05, we do 
 
 [png]
 
-One Sample t-test
-
-data:  lot2_table$PSI
-t = 0.51745, df = 49, p-value = 0.6072
-alternative hypothesis: true mean is not equal to 1500
-95 percent confidence interval:
- 1499.423 1500.977
-sample estimates:
-mean of x 
-   1500.2 
-
 Because the p-value above is greater than the significance level of 0.05, we do not have sufficient evidence to reject the null hypothesis, meaning that our suspension coil dataset is statistically similar to the true mean.
 
 **RESULTS OF 1-SAMPLE T-TEST (Lot 3)**
@@ -129,17 +96,6 @@ Because the p-value above is greater than the significance level of 0.05, we do 
 > t.test(lot3_table$PSI, mu = 1500)
 
 [png]
-
-One Sample t-test
-
-data:  lot3_table$PSI
-t = -2.0916, df = 49, p-value = 0.04168
-alternative hypothesis: true mean is not equal to 1500
-95 percent confidence interval:
- 1492.431 1499.849
-sample estimates:
-mean of x 
-  1496.14 
 
 Because the p-value above is less than the significance level of 0.05, there is sufficient evidence to reject the null hypothesis, meaning that our suspension coil data for this subset is NOT statistically similar to the true mean.
 
