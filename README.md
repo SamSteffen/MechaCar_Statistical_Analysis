@@ -69,15 +69,12 @@ To determine if all manufacturing lots and each lot individually are statistical
 The log10 coefficient was not used in this instance because the data was not skewed and the datasets and subsets were sufficiently sized for the tests.
 
 **RESULTS OF 1-SAMPLE T-TEST (All Lots)**
->t.test(suscoil_table$PSI, mu=1500)
 
 <img width="354" alt="t-test_all_lots" src="https://user-images.githubusercontent.com/104729703/189578458-ed55df94-c060-4169-90e4-0d3a5990f21c.png">
 
 Because the p-value above is greater than the significance level of 0.05, we do not have sufficient evidence to reject the null hypothesis, meaning that our suspension coil dataset is statistically similar to the true mean.
 
 **RESULTS OF 1-SAMPLE T-TEST (Lot 1)**
-> lot1_table <- subset(suscoil_table, Manufacturing_Lot=="Lot1")
-> t.test(lot1_table$PSI, mu = 1500)
 
 <img width="396" alt="t-test_lot1" src="https://user-images.githubusercontent.com/104729703/189578485-b2e22aa2-25bc-4838-8156-9721c7a039ef.png">
 
@@ -85,16 +82,12 @@ Because the p-value above is greater than the significance level of 0.05, we do 
 Because the p-value above is greater than the significance level of 0.05, we do not have sufficient evidence to reject the null hypothesis, meaning that our suspension coil dataset is statistically similar to the true mean.
 
 **RESULTS OF 1-SAMPLE T-TEST (Lot 2)**
-> lot2_table <- subset(suscoil_table, Manufacturing_Lot=="Lot2")
-> t.test(lot2_table$PSI, mu = 1500)
 
 <img width="380" alt="t-test_lot2" src="https://user-images.githubusercontent.com/104729703/189578499-5c7f1acf-8a2e-4789-844a-6795a404fbe9.png">
 
 Because the p-value above is greater than the significance level of 0.05, we do not have sufficient evidence to reject the null hypothesis, meaning that our suspension coil dataset is statistically similar to the true mean.
 
 **RESULTS OF 1-SAMPLE T-TEST (Lot 3)**
-> lot3_table <- subset(suscoil_table, Manufacturing_Lot=="Lot3")
-> t.test(lot3_table$PSI, mu = 1500)
 
 <img width="376" alt="t-test_lot3" src="https://user-images.githubusercontent.com/104729703/189578520-843ba6c1-baf2-495f-bf9a-b4c41bb2d9bd.png">
 
