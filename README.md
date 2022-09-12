@@ -17,7 +17,7 @@ For this linear model, the assumptions held about the data were as follows:
 
 The summary output of this model is shown below.
 
-[screenshot of summary results]
+<img width="370" alt="Deliverable1_linear_model_summary" src="https://user-images.githubusercontent.com/104729703/189578385-44950ace-9c1b-4636-926d-87c3ba48639f.png">
 
 From the Pr(>|t|) values, which tell us the probability that each coefficient contributes a random amount of variance to the linear model, we can determine the following:
 
@@ -49,11 +49,11 @@ The MechaCar Suspension_Coil.csv dataset contains the results from multiple prod
 
 The dataframe below shows the PSI metrics mean, median, variance and standard deviation for all the PSI values in the Suspension_Coil.csv dataset, across all the manufacturing lots:
 
-[image]
+<img width="318" alt="Deliverable2_summary_df" src="https://user-images.githubusercontent.com/104729703/189578422-ab904118-6796-406c-a2f8-5a63754912c4.png">
 
 The dataframe below shows PSI metrics mean, median, variance, and standard deviation, for each lot in the dataset:
 
-[image2]
+<img width="462" alt="Deliverable2_summary_df2" src="https://user-images.githubusercontent.com/104729703/189578435-be81f772-e8de-4def-908c-cb669b16436e.png">
 
 The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. While this metric is satisfied when the PSI variance is calculated across all the manufacturing lots (as shown in the first dataframe above, where the variance is 62.29356), yet, when variance is calculated individually by lot, the variance for suspension coils in lot 3 are shown to be far in excess of this amount (170.28612 > 100).
 
@@ -71,7 +71,7 @@ The log10 coefficient was not used in this instance because the data was not ske
 **RESULTS OF 1-SAMPLE T-TEST (All Lots)**
 >t.test(suscoil_table$PSI, mu=1500)
 
-[png]
+<img width="354" alt="t-test_all_lots" src="https://user-images.githubusercontent.com/104729703/189578458-ed55df94-c060-4169-90e4-0d3a5990f21c.png">
 
 Because the p-value above is greater than the significance level of 0.05, we do not have sufficient evidence to reject the null hypothesis, meaning that our suspension coil dataset is statistically similar to the true mean.
 
@@ -79,7 +79,8 @@ Because the p-value above is greater than the significance level of 0.05, we do 
 > lot1_table <- subset(suscoil_table, Manufacturing_Lot=="Lot1")
 > t.test(lot1_table$PSI, mu = 1500)
 
-[png]
+<img width="396" alt="t-test_lot1" src="https://user-images.githubusercontent.com/104729703/189578485-b2e22aa2-25bc-4838-8156-9721c7a039ef.png">
+
 
 Because the p-value above is greater than the significance level of 0.05, we do not have sufficient evidence to reject the null hypothesis, meaning that our suspension coil dataset is statistically similar to the true mean.
 
@@ -87,7 +88,7 @@ Because the p-value above is greater than the significance level of 0.05, we do 
 > lot2_table <- subset(suscoil_table, Manufacturing_Lot=="Lot2")
 > t.test(lot2_table$PSI, mu = 1500)
 
-[png]
+<img width="380" alt="t-test_lot2" src="https://user-images.githubusercontent.com/104729703/189578499-5c7f1acf-8a2e-4789-844a-6795a404fbe9.png">
 
 Because the p-value above is greater than the significance level of 0.05, we do not have sufficient evidence to reject the null hypothesis, meaning that our suspension coil dataset is statistically similar to the true mean.
 
@@ -95,7 +96,7 @@ Because the p-value above is greater than the significance level of 0.05, we do 
 > lot3_table <- subset(suscoil_table, Manufacturing_Lot=="Lot3")
 > t.test(lot3_table$PSI, mu = 1500)
 
-[png]
+<img width="376" alt="t-test_lot3" src="https://user-images.githubusercontent.com/104729703/189578520-843ba6c1-baf2-495f-bf9a-b4c41bb2d9bd.png">
 
 Because the p-value above is less than the significance level of 0.05, there is sufficient evidence to reject the null hypothesis, meaning that our suspension coil data for this subset is NOT statistically similar to the true mean.
 
